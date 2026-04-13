@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.hafaup.guam'
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.hafaup.guam"
+        minSdk 21
+        targetSdk 35
+        versionCode 3
+        versionName "1.0.2"
+        manifestPlaceholders = [
+            hostName: "hafaup.com",
+            defaultUrl: "https://hafaup.com/app.html",
+            launcherName: "괌장터",
+            assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], "target": {"namespace": "web", "site": "https://hafaup.com"}}]'
+        ]
+    }
+    signingConfigs {
+        release {
+            storeFile file("release.keystore")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: "hafaup2026"
+            keyAlias System.getenv("KEY_ALIAS") ?: "hafaup"
+            keyPassword System.getenv("KEY_PASSWORD") ?: "hafaup2026"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies {
+    implementation 'androidx.browser:browser:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
