@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    namespace 'com.hafaup.app'
+    namespace 'com.hafaup.guam'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.hafaup.app"
+        applicationId "com.hafaup.guam"
         minSdk 21
         targetSdk 34
-        versionCode 2
+        versionCode 4
         versionName "2.0.0"
 
         manifestPlaceholders = [
