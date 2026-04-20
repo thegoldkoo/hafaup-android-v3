@@ -20,7 +20,6 @@ android {
             assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], "target": {"namespace": "web", "site": "https://hafaup.com"}}]'
         ]
 
-        // App Shortcuts, Share Target 관련 리소스 참조
         resConfigs "ko", "en"
     }
 
@@ -59,8 +58,18 @@ android {
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22'
+    }
+}
+
 dependencies {
     implementation 'androidx.browser:browser:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.core:core:1.12.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
 }
