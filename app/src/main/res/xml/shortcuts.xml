@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
-
     <shortcut
         android:shortcutId="write"
         android:enabled="true"
@@ -9,12 +8,11 @@
         android:shortcutLongLabel="@string/shortcut_write_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.hafaup.app"
-            android:targetClass="com.hafaup.app.LauncherActivity">
+            android:targetPackage="com.hafaup.guam"
+            android:targetClass="com.hafaup.guam.LauncherActivity">
             <extra android:name="shortcut_target" android:value="write" />
         </intent>
     </shortcut>
-
     <shortcut
         android:shortcutId="chat"
         android:enabled="true"
@@ -23,12 +21,11 @@
         android:shortcutLongLabel="@string/shortcut_chat_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.hafaup.app"
-            android:targetClass="com.hafaup.app.LauncherActivity">
+            android:targetPackage="com.hafaup.guam"
+            android:targetClass="com.hafaup.guam.LauncherActivity">
             <extra android:name="shortcut_target" android:value="chat" />
         </intent>
     </shortcut>
-
     <shortcut
         android:shortcutId="market"
         android:enabled="true"
@@ -37,12 +34,11 @@
         android:shortcutLongLabel="@string/shortcut_market_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.hafaup.app"
-            android:targetClass="com.hafaup.app.LauncherActivity">
+            android:targetPackage="com.hafaup.guam"
+            android:targetClass="com.hafaup.guam.LauncherActivity">
             <extra android:name="shortcut_target" android:value="market" />
         </intent>
     </shortcut>
-
     <shortcut
         android:shortcutId="delivery"
         android:enabled="true"
@@ -51,10 +47,9 @@
         android:shortcutLongLabel="@string/shortcut_delivery_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.hafaup.app"
-            android:targetClass="com.hafaup.app.LauncherActivity">
+            android:targetPackage="com.hafaup.guam"
+            android:targetClass="com.hafaup.guam.LauncherActivity">
             <extra android:name="shortcut_target" android:value="delivery" />
         </intent>
     </shortcut>
-
 </shortcuts>
