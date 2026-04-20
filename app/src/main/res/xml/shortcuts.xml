@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="write"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_write"
+        android:shortcutShortLabel="@string/shortcut_write_short"
+        android:shortcutLongLabel="@string/shortcut_write_long">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hafaup.app"
+            android:targetClass="com.hafaup.app.LauncherActivity">
+            <extra android:name="shortcut_target" android:value="write" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_chat"
+        android:shortcutShortLabel="@string/shortcut_chat_short"
+        android:shortcutLongLabel="@string/shortcut_chat_long">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hafaup.app"
+            android:targetClass="com.hafaup.app.LauncherActivity">
+            <extra android:name="shortcut_target" android:value="chat" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="market"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_market"
+        android:shortcutShortLabel="@string/shortcut_market_short"
+        android:shortcutLongLabel="@string/shortcut_market_long">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hafaup.app"
+            android:targetClass="com.hafaup.app.LauncherActivity">
+            <extra android:name="shortcut_target" android:value="market" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="delivery"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_delivery"
+        android:shortcutShortLabel="@string/shortcut_delivery_short"
+        android:shortcutLongLabel="@string/shortcut_delivery_long">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hafaup.app"
+            android:targetClass="com.hafaup.app.LauncherActivity">
+            <extra android:name="shortcut_target" android:value="delivery" />
+        </intent>
+    </shortcut>
+
+</shortcuts>

@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.hafaup.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.hafaup.app"
+        minSdk 21
+        targetSdk 34
+        versionCode 2
+        versionName "2.0.0"
+
+        manifestPlaceholders = [
+            hostName: "hafaup.com",
+            defaultUrl: "https://hafaup.com/app.html",
+            launcherName: "괌장터",
+            assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], "target": {"namespace": "web", "site": "https://hafaup.com"}}]'
+        ]
+
+        // App Shortcuts, Share Target 관련 리소스 참조
+        resConfigs "ko", "en"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('KEYSTORE_FILE')) {
+                storeFile file(project.property('KEYSTORE_FILE'))
+                storePassword project.property('KEYSTORE_PASSWORD')
+                keyAlias project.property('KEY_ALIAS')
+                keyPassword project.property('KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (project.hasProperty('KEYSTORE_FILE')) {
+                signingConfig signingConfigs.release
+            }
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    bundle {
+        language { enableSplit = true }
+        density  { enableSplit = true }
+        abi      { enableSplit = true }
+    }
+}
+
+dependencies {
+    implementation 'androidx.browser:browser:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.12.0'
+}

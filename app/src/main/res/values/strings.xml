@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">괌장터</string>
+
+    <!-- Shortcuts -->
+    <string name="shortcut_write_short">글쓰기</string>
+    <string name="shortcut_write_long">새 글 쓰기</string>
+    <string name="shortcut_chat_short">채팅</string>
+    <string name="shortcut_chat_long">채팅 목록</string>
+    <string name="shortcut_market_short">장터</string>
+    <string name="shortcut_market_long">중고거래</string>
+    <string name="shortcut_delivery_short">택배</string>
+    <string name="shortcut_delivery_long">택배 조회</string>
+</resources>

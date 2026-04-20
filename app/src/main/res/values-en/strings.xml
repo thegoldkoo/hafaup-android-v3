@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HafaUp</string>
+
+    <string name="shortcut_write_short">Write</string>
+    <string name="shortcut_write_long">New Post</string>
+    <string name="shortcut_chat_short">Chat</string>
+    <string name="shortcut_chat_long">Chat List</string>
+    <string name="shortcut_market_short">Market</string>
+    <string name="shortcut_market_long">Marketplace</string>
+    <string name="shortcut_delivery_short">Delivery</string>
+    <string name="shortcut_delivery_long">Track Delivery</string>
+</resources>
